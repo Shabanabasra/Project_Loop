@@ -1,0 +1,13 @@
+{
+  "triggerType": "schedule",
+  "cadence": "weekly",
+  "repeatFailureThreshold": 2,
+  "branchPrefix": "claude/",
+  "autoMerge": false,
+  "canModifyRulesFileDirectly": false,
+  "requiresHumanApproval": true,
+  "stateFile": "dreaming-state.md",
+  "sourceLogFile": "progress.md",
+  "rulesFile": "improvement-rules.md",
+  "note": "This config never stores credentials. No real GitHub PR is created by the local simulation scripts - all PR/branch actions are simulated and clearly labeled as such."
+}

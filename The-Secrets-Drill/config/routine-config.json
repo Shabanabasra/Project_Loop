@@ -1,0 +1,10 @@
+{
+  "routineType": "Remote",
+  "triggerType": "one-off",
+  "repeatingSchedule": false,
+  "task": "Read OPENROUTER_API_KEY from the environment and confirm it is available",
+  "requiredSecretName": "OPENROUTER_API_KEY",
+  "secretSource": "environment-variables-panel",
+  "envFileAllowed": false,
+  "note": "This config references only the secret's NAME (OPENROUTER_API_KEY), never its value. The real value must live in the Routine's environment variables panel, never in a committed or gitignored .env file. No real API key is stored anywhere in this project."
+}

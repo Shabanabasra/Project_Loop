@@ -1,0 +1,68 @@
+# ==============================
+# Environment & Secrets
+# ==============================
+
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Secret / credential files
+*.key
+*.pem
+*.p12
+*.pfx
+*.secret
+
+secrets/
+credentials/
+
+
+# ==============================
+# Python
+# ==============================
+
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+.venv/
+venv/
+env/
+
+
+# ==============================
+# Node.js
+# ==============================
+
+node_modules/
+.next/
+dist/
+build/
+
+
+# ==============================
+# IDE / Editor
+# ==============================
+
+.vscode/
+.idea/
+
+
+# ==============================
+# Operating System
+# ==============================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+
+# ==============================
+# Temporary Files
+# ==============================
+
+*.tmp
+*.temp

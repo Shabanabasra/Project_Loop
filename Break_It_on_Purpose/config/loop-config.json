@@ -1,0 +1,7 @@
+{
+  "loopName": "morning-brief",
+  "cadenceDescription": "once per day, every weekday morning",
+  "runsPerDay": 1,
+  "sourceFile": "source-data.txt",
+  "note": "cadenceDescription and runsPerDay are simulated values for this offline scaffold. No real Windows scheduled task is created by this project."
+}

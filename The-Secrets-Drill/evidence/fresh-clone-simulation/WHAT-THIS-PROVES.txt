@@ -1,0 +1,3 @@
+This folder simulates a fresh repository clone.
+It intentionally excludes .env, because .env is listed
+in .gitignore and a real fresh clone would never receive it.

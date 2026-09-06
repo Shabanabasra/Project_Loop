@@ -1,0 +1,10 @@
+{
+  "triggerType": "pull_request",
+  "triggerEvents": ["opened", "synchronize"],
+  "reviewOnly": true,
+  "allowedVerdicts": ["PASS", "FAIL"],
+  "autoMerge": false,
+  "codeModificationAllowed": false,
+  "canActAsImplementer": false,
+  "note": "This config never stores credentials. Any GitHub authentication is provided separately through the Routine's environment variable panel, referenced only by name (e.g. GITHUB_TOKEN), never by value."
+}

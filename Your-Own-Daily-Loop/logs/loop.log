@@ -1,0 +1,4 @@
+# loop.log - one line per run of the Daily Dependency Audit Loop.
+# Newest lines are appended at the bottom.
+# Fields are separated by " | " and written as KEY=VALUE pairs.
+# This file is appended to by scripts\daily-loop.ps1. Do not edit by hand.RUN_ID=RUN-20260829-153656 | TIMESTAMP=2026-08-29 15:36:56 | MAKER_STATUS=SUCCESS | REVIEWER_VERDICT=PASS | BUDGET_STATUS=OK | NEEDS_HUMAN=NO | REASON=None

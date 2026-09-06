@@ -1,0 +1,9 @@
+{
+  "loopName": "daily-dependency-audit",
+  "cadenceDescription": "once per day, every day",
+  "maxRuns": 3,
+  "sourceFile": "source-data.txt",
+  "simulateFailure": "none",
+  "simulateReviewerFailure": false,
+  "note": "maxRuns controls how many times scripts\\heartbeat.ps1 will fire in one demonstration session, so it never runs forever. simulateFailure must be one of: none, missingData, unexpectedError. simulateReviewerFailure must be true or false. Set both back to none/false to restore normal operation."
+}

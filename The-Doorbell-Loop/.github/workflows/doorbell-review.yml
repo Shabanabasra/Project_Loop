@@ -1,0 +1,81 @@
+# ==========================================================================
+# Doorbell Review Workflow — Project 6: The Doorbell Loop
+# ==========================================================================
+#
+# WHAT THIS WORKFLOW DOES RIGHT NOW (safe, no AI required):
+#   It listens for two GitHub Pull Request events — "opened" and
+#   "synchronize" — and, when either one fires, simply CONFIRMS that the
+#   event was received by printing information about it. This proves the
+#   event-driven heartbeat is wired up correctly, with no AI model, no
+#   CCR, and no Claude Code/OpenCode CLI needed yet.
+#
+# WHAT THIS WORKFLOW WILL DO LATER:
+#   The section marked "FUTURE AI REVIEW STEP" below is where a real
+#   call to Claude Code, OpenCode, or a GitHub connector will be added,
+#   once your CCR/agent setup is working again. Right now that section
+#   is intentionally just a placeholder comment — it does NOT pretend
+#   an AI review is already happening.
+#
+# SAFETY NOTES:
+#   - No API keys or secrets are hard-coded anywhere in this file.
+#   - Only built-in, automatically-provided GitHub context variables are
+#     used (event name, PR number, repo, commit SHA).
+#   - Permissions are scoped to the minimum needed: read repo contents,
+#     write PR reviews/comments (for later use).
+# ==========================================================================
+
+name: Doorbell Review (Event Confirmation Scaffold)
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+# Minimum permissions needed:
+# - contents: read   -> to read the repo/diff
+# - pull-requests: write -> to post review comments (used later)
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  confirm-doorbell-event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print event information (proves the doorbell rang)
+        run: |
+          echo "=========================================="
+          echo " DOORBELL EVENT RECEIVED"
+          echo "=========================================="
+          echo "Event name / action : ${{ github.event.action }}"
+          echo "Pull request number : ${{ github.event.pull_request.number }}"
+          echo "Repository          : ${{ github.repository }}"
+          echo "Commit SHA          : ${{ github.event.pull_request.head.sha }}"
+          echo "=========================================="
+          echo "This confirms the event-driven heartbeat fired."
+          echo "No AI review has been performed yet."
+          echo "=========================================="
+
+      # ------------------------------------------------------------------
+      # FUTURE AI REVIEW STEP (not active yet — placeholder only)
+      # ------------------------------------------------------------------
+      # When CCR / Claude Code / OpenCode is working again, replace this
+      # comment block with a real step that:
+      #   1. Reads the PR diff
+      #   2. Follows skills/pr-review-skill.md to review it
+      #   3. Posts a review comment on the PR
+      #   4. Optionally runs reviewers/reviewer.md as a separate checker
+      #      step and posts its PASS/FAIL verdict too
+      #
+      # Example shape (NOT functional yet, do not uncomment without
+      # wiring in real credentials/connector configuration):
+      #
+      # - name: Run AI PR review (FUTURE)
+      #   run: |
+      #     echo "This step will call the AI reviewer once connected."
+      # ------------------------------------------------------------------

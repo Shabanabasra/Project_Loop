@@ -1,0 +1,5 @@
+{
+  "connectorType": "local-simulation",
+  "futureConnectorOptions": ["github", "filesystem-real-project", "package-manager-api"],
+  "note": "This local scaffold does not call any external API and does not require any API key. It reads only source-data.txt inside this project folder. Later, when Claude Code, OpenCode, or CCR is working again, connectorType can be changed and scripts\\implementer.ps1 can be extended to call a real connector, such as reading a real package.json or calling a real GitHub or package-registry API."
+}

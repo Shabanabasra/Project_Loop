@@ -1,0 +1,13 @@
+project-name: Demo Project
+
+dependency: package-a
+version: 1.2.0
+status: outdated
+
+dependency: package-b
+version: 2.4.1
+status: current
+
+dependency: package-c
+version: 0.9.0
+status: review

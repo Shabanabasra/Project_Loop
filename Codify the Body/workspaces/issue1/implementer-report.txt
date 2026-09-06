@@ -1,0 +1,4 @@
+﻿CANDIDATE: issue1.md
+FILES CHANGED: (simulated) source file referenced in the issue
+SUMMARY OF FIX: (simulated) applied the smallest change described in the issue's acceptance criteria.
+TESTS RUN: (simulated) relevant test file run; assumed passing for this scaffold run.

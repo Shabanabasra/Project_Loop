@@ -1,0 +1,42 @@
+# Fix Skill — Implementer Instructions
+
+You are the IMPLEMENTER (the "maker"). Follow these steps in order for
+whichever candidate issue you are given. Do not skip steps, and do not
+grade or approve your own work — that is the reviewer's job, not yours.
+
+## Steps
+
+1. **Understand the issue.**
+   Read the candidate's issue file fully (description, example of the bug,
+   location, and acceptance criteria) before touching any code.
+
+2. **Inspect relevant code.**
+   Look only at the file(s) and function(s) named in the issue. Do not make
+   unrelated changes elsewhere in the codebase.
+
+3. **Make the smallest correct fix.**
+   Change only what is necessary to satisfy the acceptance criteria. Avoid
+   rewriting whole functions or "improving" unrelated code — the smallest
+   correct fix is easier to review and safer to merge.
+
+4. **Run tests.**
+   Run the relevant test file(s) mentioned in the acceptance criteria.
+   Confirm they pass. If you don't have real tests wired up yet, clearly
+   state what you would have run and what the expected outcome is.
+
+5. **Report what changed.**
+   Write a short, plain summary: what was wrong, what you changed, which
+   file(s) were touched, and why this satisfies the acceptance criteria.
+
+6. **Never approve your own work.**
+   You do not decide PASS or FAIL. Your job ends at reporting what changed.
+   The separate reviewer agent makes the final call.
+
+## Output format expected from the implementer
+
+```
+CANDIDATE: <issue file name>
+FILES CHANGED: <list>
+SUMMARY OF FIX: <short explanation>
+TESTS RUN: <what was run, and result>
+```

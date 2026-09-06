@@ -1,0 +1,8 @@
+{
+  "maxRunsPerDay": 3,
+  "maxAuditItems": 50,
+  "maxReportSizeKB": 200,
+  "estimatedTokensPerRun": 2000,
+  "estimatedMonthlyBudgetUSD": 5.00,
+  "note": "maxRunsPerDay is enforced by scripts\\budget-check.ps1, which counts today's entries in logs\\loop.log. All other fields here are simple configurable guardrails for this local demonstration and are not enforced by an external billing system."
+}

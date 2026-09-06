@@ -1,0 +1,6 @@
+﻿{
+    "sabotageEnabled":  false,
+    "method":  "missingFile",
+    "maxAttempts":  3,
+    "note":  "method must be either missingFile or impossibleCondition. maxAttempts must be a small positive whole number, for example 3. Set sabotageEnabled to false to restore normal operation."
+}
